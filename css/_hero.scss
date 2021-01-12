@@ -1,5 +1,25 @@
-h1 {
-  color: $skyblue;
-  font-size: 5rem;
-  text-transform: uppercase;
+.hero {
+  &__header {
+
+  }
+
+  &__imgcontainer {
+    --slant: 15%;
+    width: 60%;
+    max-width: 500px;
+    max-height: 70vh;
+    // height: 60vh;
+    clip-path: polygon(var(--slant) 0, 100% 0, calc(100% - var(--slant)) 100%, 0 100%);
+  
+    img {
+      object-fit: scale-down;
+    
+    }
+  }
+
+  &__name {
+    color: $skyblue;
+    font-size: 5rem;
+    text-transform: uppercase;
+  }
 }
