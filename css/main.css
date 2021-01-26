@@ -73,6 +73,10 @@ a {
   color: #0681C7;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .highlight {
   position: relative;
 }
@@ -521,5 +525,16 @@ a {
         -ms-grid-row-align: start;
         align-self: start;
   }
+}
+
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.hire {
+  height: 100vh;
 }
 /*# sourceMappingURL=main.css.map */
