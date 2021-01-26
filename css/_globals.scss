@@ -27,49 +27,94 @@ img {
   height: 100%;
 }
 
+// a {
+//   text-decoration: none;
+//   position: relative;
+//   z-index: 1;
+//   transform: skewX(0deg);
+//   transition: transform .3s ease-in-out;
+// }
+
+// // a:hover {
+// //   transform: skewX(-10deg);
+// // }
+
+// a::before {
+//   content: '';
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   z-index: -1;
+//   background-color: $lightsky;
+//   transform: scaleX(0);
+//   transform-origin: right;
+//   transition: transform 300ms ease-in, color 300ms ease-in;
+// }
+
+// a:hover::before,
+// a:focus::before {
+//   transform: scaleX(1);
+//   transform-origin: left;
+// }
+
+// a:hover,
+// a:focus {
+//   color: $skyblue;
+// }
+
+// ALTERNATE HOVER STYLES
 a {
   text-decoration: none;
+}
+
+.hover {
   position: relative;
   z-index: 1;
+  transform: skewX(0deg);
+  transition: transform .3s ease-in-out;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: $lightsky;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 300ms ease-in, color 300ms ease-in;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  &:hover,
+  &:focus {
+    color: $skyblue;
+  }
 }
 
-a::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  background-color: $lightsky;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 300ms ease-in, color 300ms ease-in;
-}
-
-a:hover::before,
-a:focus::before {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
-a:hover,
-a:focus {
-  color: $skyblue;
-}
+// END OF ALTERNATE HOVER STYLES
 
 .highlight {
   position: relative;
-}
 
-.highlight::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 90%;
-  transform: translate(.5em, .5em);
-  background-color: $lightsky;
-  z-index: -1;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    transform: translate(.5em, .5em);
+    background-color: $lightsky;
+    z-index: -1;
+  }
 }
 
 .hide-for-mobile {
