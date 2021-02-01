@@ -3,4 +3,5 @@ const navbarMenu = document.getElementsByClassName('navbar__menu')[0]
 
 toggleButton.addEventListener('click', () => {
   navbarMenu.classList.toggle('menu-open')
+  toggleButton.classList.toggle('menu-open')
 });
