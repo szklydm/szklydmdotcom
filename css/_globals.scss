@@ -132,3 +132,28 @@ ul {
     display: none;
   }
 }
+
+.section__header {
+  margin: 2rem auto;
+  text-align: center;
+  position: relative;
+  width: 100%;
+
+  &icon {
+    height: 3.75rem;
+    fill: $skyblue;
+    display: inline;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-40%);
+  }
+
+  &title {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.875rem;
+    color: $skyblue;
+    max-width: 60%;
+  }
+}
