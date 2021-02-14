@@ -1,6 +1,6 @@
 .hero {
   @include breakpoint-up(tablet){
-  height: 100vh;
+  // min-height: 100vh;
   }
 
   &__header {
@@ -107,30 +107,22 @@
   }
 
   &__subtitle {
-    margin: 0;
+    margin: 3rem auto 0;
     font-size: 1.125rem;
-    line-height: .7;
-
-    &:nth-of-type(2) {
-      opacity: .5;
-    }
-    &:nth-of-type(3) {
-      opacity: .3;
-    }
-    &:nth-of-type(4) {
-      opacity: .15;
-    }
-    &:nth-of-type(5) {
-      opacity: .07;
-    }
+    opacity: .5;
+    line-height: 1.2;
+    max-width: 80%;
 
     @include breakpoint-up(tablet) {
       font-size: 1.3rem;
+      max-width: 40rem
     }
 
     @include breakpoint-up(desktop){
       font-size: 1.875rem;
-      line-height: .9;
+      line-height: 1.5;
+      max-width: 27ch;
+      margin: 5rem 0 0 0;
     }
   }
 

@@ -48,6 +48,10 @@
         transform: scaleY(1);
       }
     }
+
+    @include breakpoint-up(tablet){
+      background-color: transparent;
+    }
   }
 
   &__items {
@@ -70,7 +74,7 @@
   }
 
   &__item {
-    margin-right: 4em;
+    margin-right: 5em;
     
     &:not(:last-of-type){
       @include breakpoint-down(tablet){
@@ -130,6 +134,7 @@
       width: 100%;
       line-height: .9;
       padding: .25rem 0;
+      box-shadow: 0 5px 5px rgba(0,0,0,.2);
     }
   }
   
