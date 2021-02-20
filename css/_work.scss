@@ -5,4 +5,119 @@
   .highlight {
     width: fit-content;
   }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    --distance: -1.5rem;
+    padding: 1rem 1rem 1rem calc(var(--distance) * -2);
+  }
+
+  &__cards {
+    grid-column: 1 / 2;
+    // background-color: darkgoldenrod;
+  }
+
+  &__cardcontainer {
+    position: relative;
+    
+    .timeline {
+      position: absolute;
+      left: var(--distance);
+      font-size: .5rem;
+      text-align: center;
+      color: $skyblue;
+      transform: translateX(-50%);
+    }
+
+    .date {
+      max-width: 4ch;
+    }
+
+    .exit-date {
+      top: var(--distance);
+    }
+    
+    .duration {
+      height: 100%;
+      top: 0;
+      width: 1px;
+      background-color: $skyblue;
+    }
+
+    .start-date {
+      bottom: -2rem;
+    }
+    
+
+    .card {
+      padding: 1rem;
+      box-shadow: 0 4px 4px 0 rgba(black, .15);
+
+      &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+      }
+
+      &__job-title {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.1;
+        margin: 0;
+      }
+
+      &__company-icon {
+        height: 2.5rem;
+      }
+
+      &__body {}
+
+      &__resp-item {
+        position: relative;
+        padding: 1rem 0;
+
+        .desc {
+          font-size: .85rem;
+          font-weight: 300;
+          text-align: center;
+          margin: 0 auto;
+          max-width: 90%;
+        }
+
+        .icon {
+          height: 2.5rem;
+          width: fit-content;
+          margin: .5rem auto 0; 
+
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+          }
+
+          &__name {
+            text-align: center;
+            font-size: .625rem;
+            margin: 0;
+          }
+        }
+
+        &:not(:last-of-type)::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 30%;
+          right: 30%;
+          height: 1px;
+          background-color: $skyblue;
+        }
+      }
+    }
+  }
+
+  &__selfstudy {
+    grid-column: -1 / -2;
+  }
 }
